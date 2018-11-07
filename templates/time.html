@@ -1,0 +1,10 @@
+{% extends "base.html"%}
+{% block scripts %}
+    {{ super() }}
+    {{ moment.include_moment() }}　　
+    {{ moment.locale('zh-cn') }}　　
+
+{% block page_content %}
+    {{ super() }}
+    <h3>Time now is {{ moment(current_time).format('LLL') }}</h3><hr>
+{% endblock %}
